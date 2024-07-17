@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { LoginService } from './service/login-service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
   title = 'streamio';
   navbg: any;
+  loginService: any;
+
+constructor(public LoginService: LoginService) { }
 
   @HostListener('document:scroll') scrollover() {
     console.log(document.body.scrollTop,'scrolllength#');
